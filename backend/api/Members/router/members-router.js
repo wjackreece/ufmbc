@@ -20,6 +20,8 @@ server.get("/", verifyMember, getMemberByMemberId, (req, res, next) => {});
 server.post("/", verifyAdmin, addMember, (req, res, next) => {});
 server.put("/", verifyAdmin, updateMemberByMemberId, (req, res, next) => {});
 server.put("/", verifyAdmin, updateMemberByEmail, (req, res, next) => {});
-server.post("/", verifyMember, deactivateMember, (req, res, next) => {});
+server.post("/", verifyMember, deactivateMember, (req, res, next) => {
+  console.log("deactivated");
+});
 
 module.exports = server;
