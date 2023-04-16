@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home.js";
+import Navbar from "./components/Navbar/Navbar.js";
 
-function App() {
+import css from "./styles/app.module.scss";
+
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <div className={`bg-primary ${css.container}`}>
+      <Navbar />
+    </div>
   );
-}
+};
 
 export default App;
