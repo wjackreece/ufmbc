@@ -79,6 +79,8 @@
         }
 
         &:hover {
+          text-decoration: underline maroon;
+          text-underline-offset: 10px;
           color: $secondary;
         }
       }

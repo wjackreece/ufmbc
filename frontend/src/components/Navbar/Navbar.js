@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import css from "./Navbar.module.scss";
 import { motion } from "framer-motion";
@@ -9,6 +9,7 @@ import useOutsideAlerter from "../../hooks/useHeaderShadow";
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [menuHidden, setMenuHidden] = useState(true);
   const headerShadow = useHeaderShadow();
   const menuRef = useRef();
 
@@ -16,17 +17,34 @@ const Navbar = () => {
     menuRef,
     setMenuOpened,
   });
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newScreenWidth = window.innerWidth;
+      console.log(newScreenWidth);
+      if (newScreenWidth > 768) {
+        setMenuHidden(true);
+      } else {
+        setMenuHidden(false);
+      }
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
+
   return (
     <motion.div
       initial="hidden"
       whileInView="show"
       variants={headerVariants}
-      viewport={{ once: false, amount: 0.25 }}
+      //   viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
       style={{ boxShadow: headerShadow }}
     >
       <div className={`flexCenter innerWidth ${css.container}`}>
-        <div className={css.name}>WPJ</div>
+        <div className={css.name}>UFMBC</div>
         <ul
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
@@ -36,29 +54,31 @@ const Navbar = () => {
             <a href="filler">Home</a>
           </li>
           <li>
-            <a href="filler">About Me</a>
+            <a href="filler">About Us</a>
           </li>
           <li>
-            <a href="filler">Education and Experience</a>
+            <a href="filler">Sermons</a>
           </li>
           <li>
-            <a href="filler">Portfolio</a>
+            <a href="filler">Gallery</a>
           </li>
 
           <li>
-            <a href="filler">Testimonials</a>
+            <a href="filler">Events</a>
           </li>
           <li>
-            <a href="filler">Contact Me</a>
+            <a href="filler">Contact Us</a>
           </li>
         </ul>
         {/* This is ONLY for medium and small screens */}
-        <div
-          className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}
-        >
-          <BiMenuAltRight size={30} />
-        </div>
+        {!menuHidden && (
+          <div
+            className={css.menuIcon}
+            onClick={() => setMenuOpened((prev) => !prev)}
+          >
+            <BiMenuAltRight size={30} />
+          </div>
+        )}
       </div>
     </motion.div>
   );
