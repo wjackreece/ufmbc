@@ -44,7 +44,9 @@ const Navbar = () => {
       style={{ boxShadow: headerShadow }}
     >
       <div className={`flexCenter innerWidth ${css.container}`}>
-        <div className={css.name}>UFMBC</div>
+        <div className={css.name}>
+          <img src="./UFMBClogo.png" alt="" />
+        </div>
         <ul
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
