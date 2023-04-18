@@ -45,7 +45,7 @@ const Navbar = () => {
     >
       <div className={`flexCenter innerWidth ${css.container}`}>
         <div className={css.name}>
-          <img src="./UFMBClogo.png" alt="" />
+          <img src="./UFMBClogo2.jpeg" alt="" />
         </div>
         <ul
           ref={menuRef}
