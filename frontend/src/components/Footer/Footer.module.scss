@@ -1,0 +1,80 @@
+@import "../../styles/contants.scss";
+
+.wrapper {
+  @media (min-width: $sm) {
+    padding: 4rem;
+  }
+
+  @media (min-width: $xl), (min-width: $md) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: #781539;
+  color: #f9f8f1;
+
+  .container {
+    @media (min-width: $sm) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media (min-width: $xxl) {
+      max-width: 1280px;
+      margin: auto;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $sm) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    gap: 2rem;
+    width: 100%;
+
+    > div {
+      flex: 1;
+    }
+
+    .contact {
+      font-size: 1.5rem;
+      .logo {
+        img {
+          height: 7rem;
+          border: 7px solid #fcfaee;
+        }
+      }
+      .phone {
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+      .fax {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .address {
+        margin-bottom: 1.5rem;
+      }
+      .icons {
+        * {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
