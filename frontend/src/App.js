@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./components/About/About.js";
+
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer.js";
 import Map from "./components/Footer/Map.js";
@@ -13,7 +13,6 @@ const App = () => {
     <div className={`bg-primary ${css.container}`}>
       <Navbar />
       <Home />
-      <About />
       <Footer />
       <Map />
     </div>
