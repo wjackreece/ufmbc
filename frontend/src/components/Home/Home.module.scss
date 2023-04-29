@@ -1,48 +1,42 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  @media (min-width: $sm) {
-    padding: 4rem;
-  }
-
-  @media (min-width: $xl), (min-width: $md) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
   height: 80vh;
   padding: 1.5rem;
-  background-image: url("homeBackground2.jpg");
+  background-image: url("UFMBCpic3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  text-shadow: 1.5px 1.5px 1.5px rgba(125, 125, 125, 0.6);
+  text-shadow: 2px 2px 2px rgb(125, 125, 125);
 
   font-size: 4rem;
   font-family: "Zilla Slab", serif;
   font-weight: 800;
 
   .container {
-    @media (min-width: $sm) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
+    // @media (min-width: $sm) {
+    //   // display: flex;
+    //   // flex-direction: column;
+    //   // justify-content: center;
+    //   // align-items: flex-start;
+    //   padding-top: 4rem;
+    //   padding-bottom: 4rem;
+    // }
 
-    @media (min-width: $xl) {
-      padding-top: 6rem;
-      padding-bottom: 2rem;
-    }
-    @media (min-width: $xxl) {
-      max-width: 1280px;
-      margin: auto;
-    }
-    // margin-top: 3rem;
-    // padding-top: 3rem;
-    // padding-bottom: 3rem;
-    // width: 100%;
+    // @media (min-width: $xl) {
+    //   padding-top: 6rem;
+    //   padding-bottom: 2rem;
+    // }
+    // @media (min-width: $xxl) {
+    //   max-width: 1280px;
+    //   margin: auto;
+    // }
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 6rem;
+    margin-top: 8rem;
 
     .homeTextLine3 {
       font-style: italic;
