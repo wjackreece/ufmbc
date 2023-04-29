@@ -9,6 +9,21 @@ const About = () => {
         <div className={css.about}>
           About Unity Faith Missionary Baptist Church
         </div>
+        <div className={css.service}>
+          <div className={css.serviceImg}>Image</div>
+          <div className={css.serviceInfo}>
+            <div className={css.serviceTitle}>Sunday Morning Service Times</div>
+            <div className={css.serviceTimes}>
+              Bible Study: 9 a.m. - 10 a.m.
+              <br />
+              Worship Service: 10:15 a.m. - 12:30 p.m.
+              <br />
+              Communion: 1st Sunday
+              <br />
+              Youth Sunday: 2nd Sunday
+            </div>
+          </div>
+        </div>
         <div className={css.churchStatements}>
           <div className={css.purpose}>
             <section className={css.purposeTitle}> Purpose Statement</section>
