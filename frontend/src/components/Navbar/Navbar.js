@@ -53,11 +53,11 @@ const Navbar = () => {
           className={`flexCenter ${css.menu}`}
         >
           <li>
-            <a href="filler">Home</a>
+            <a href="/">Home</a>
           </li>
-          <li>
-            <a href="filler">About Us</a>
-          </li>
+          {/* <li>
+            <a href="/about">About Us</a>
+          </li> */}
           <li>
             <a href="filler">Sermons</a>
           </li>
