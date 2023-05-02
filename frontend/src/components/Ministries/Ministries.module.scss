@@ -1,49 +1,62 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  padding: 1.5rem;
-  background: white;
-  color: purple;
+  padding: 0 1.5rem;
+
+  color: white;
 
   .container {
-    padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
     align-items: flex-start;
     gap: 3rem;
-    margin: 0 3rem;
+    // margin: 0 3rem;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
 
     .banner {
+      background-image: url("banner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 85vh;
+      margin-left: -1.5rem;
+      margin-right: -2rem;
+
       .bannerTitle {
         font-size: 2rem;
         font-weight: 800;
-        margin-bottom: 3rem;
+        margin: 5rem 3rem;
+        // margin-bottom: 3rem;
       }
       .bannerVerse {
         font-size: 4rem;
         font-family: "Hepta Slab", serif;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        margin: 0 3rem;
+        width: 60%;
       }
       .bannerAuthor {
         font-size: 2rem;
         font-family: "Hepta Slab", serif;
         font-weight: 400;
-        margin-bottom: 2rem;
+        margin: 1rem 3rem;
       }
     }
     .desc {
-      width: 100%;
+      margin: 0 3rem;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       align-content: center;
       justify-content: center;
       align-items: center;
-      background: cyan;
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+      color: #781539;
+      margin: 5rem 15rem;
+      text-align: center;
+      font-weight: 300;
     }
     .ministry {
       width: 100%;
@@ -51,22 +64,25 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      background: red;
 
       .info {
-        width: 30%;
-        background: yellow;
+        width: 31%;
+
         display: flex;
         flex-direction: column;
 
         .minImg {
-          border: 2px solid lightgreen;
           border-radius: 25px 25px 0 0;
           height: 10rem;
+
+          .minImgStyle {
+            width: 100%;
+            border-radius: 25px 25px 0 0;
+            object-fit: contain;
+          }
         }
 
         .minInfo {
-          border: 2px solid lightpink;
           background-color: #f7f7f7;
           border-radius: 0 0 25px 25px;
           padding: 1rem;
