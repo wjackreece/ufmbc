@@ -7,7 +7,7 @@ export const ministryInfo = [
   {
     img: "",
     title: "Men's Ministry",
-    desc: "Spreading and celebrating the word of God among brothers",
+    desc: "Spreading and celebrating the word of God among brothers through fellowship",
   },
   {
     img: "",

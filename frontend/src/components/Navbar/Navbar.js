@@ -53,23 +53,23 @@ const Navbar = () => {
           className={`flexCenter ${css.menu}`}
         >
           <li>
-            <a href="filler">Home</a>
+            <a href="/">Home</a>
+          </li>
+          {/* <li>
+            <a href="/about">About Us</a>
+          </li> */}
+          <li>
+            <a href="/ministries">Ministries</a>
           </li>
           <li>
-            <a href="filler">About Us</a>
-          </li>
-          <li>
-            <a href="filler">Sermons</a>
-          </li>
-          <li>
-            <a href="filler">Gallery</a>
+            <a href="/">Gallery</a>
           </li>
 
           <li>
-            <a href="filler">Events</a>
+            <a href="/">Events</a>
           </li>
           <li>
-            <a href="filler">Contact Us</a>
+            <a href="/">Contact Us</a>
           </li>
         </ul>
         {/* This is ONLY for medium and small screens */}
