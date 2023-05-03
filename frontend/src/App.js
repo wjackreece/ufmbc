@@ -1,14 +1,14 @@
 import React from "react";
-import About from "./components/About/About.js";
+// import About from "./components/About/About.js";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer.js";
-import Map from "./components/Footer/Map.js";
+// import Map from "./components/Footer/Map.js";
 import Ministries from "./components/Ministries/Ministries.js";
 import Home from "./components/Home/Home.js";
 import Navbar from "./components/Navbar/Navbar.js";
 
-import css from "./styles/app.module.scss";
+// import css from "./styles/app.module.scss";
 
 const App = () => {
   return (
