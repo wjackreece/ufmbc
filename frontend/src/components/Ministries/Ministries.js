@@ -13,23 +13,26 @@ const Ministries = () => {
             “But he that is greatest among you shall be your servant.”
           </div>
           <div className={css.bannerAuthor}>Matthew 23:11</div>
-          <div className={css.desc}>
-            Description about UFMBC Ministry Program
-          </div>
-          <div className={css.ministry}>
-            {ministryInfo.map((min, i) => {
-              return (
-                <div className={css.info} key={i}>
-                  <div className={css.minImg}>{min.img}</div>
-                  <div className={css.minInfo}>
-                    <div className={css.minInfoTitle}>{min.title}</div>
-                    <div className={css.minInfoDesc}>{min.desc}</div>
-                    <button>More Info</button>
-                  </div>
+        </div>
+        <div className={css.desc}>
+          Find a space where you can fellowship, learn, and serve alongside
+          brothers and sisters in Christ
+        </div>
+        <div className={css.ministry}>
+          {ministryInfo.map((min, i) => {
+            return (
+              <div className={css.info} key={i}>
+                <div className={css.minImg}>
+                  <img className={css.minImgStyle} alt="choir" src={min.img} />
                 </div>
-              );
-            })}
-          </div>
+                <div className={css.minInfo}>
+                  <div className={css.minInfoTitle}>{min.title}</div>
+                  <div className={css.minInfoDesc}>{min.desc}</div>
+                  <button>More Info</button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

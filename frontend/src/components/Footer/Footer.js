@@ -9,32 +9,46 @@ const Footer = () => {
   return (
     <section className={css.wrapper}>
       <div className={css.container}>
-        <div className={css.contact}>
-          <div className={css.logo}>
-            <img src="./UFMBClogo2.jpeg" alt="" />
+        <div className={css.logo}>
+          <img src="./UFMBClogo2.jpeg" alt="" />
+        </div>
+        <div className={css.newsletter}>
+          <div className={css.newsletterTitle}>Join our Newsletter</div>
+          <div className={css.newsletterDesc}>
+            Sign up for our newsletter and get update emails about what is
+            happening at Unity Faith Missionary Baptist Church
           </div>
-          <div className={css.phone}>Phone: (239) 353-6604</div>
-          <div className={css.fax}>Fax: (239) 353-6605</div>
-
+          <form>
+            <input
+              type="email"
+              name="Email"
+              className={css.email}
+              placeholder="Email"
+            />
+            <input type="submit" value="Subscribe" className={css.subsc} />
+          </form>
+        </div>
+        <div className={css.contact}>
+          <div className={css.contactTitle}>Contact Us</div>
           <div className={css.address}>
-            1620 39TH Street SW <br /> Naples, FL 34117{" "}
+            1620 39TH Street SW <br /> Naples, FL 34117
+          </div>
+          <div className={css.phone}>
+            Phone: (239) 353-6604 <br />
+            Fax: (239) 353-6605
           </div>
           <div className={css.icons}>
             <span className={css.fb}>
-              <BsFacebook />
+              <BsFacebook size="30px" />
             </span>
             <span className={css.insta}>
-              <BsInstagram />
+              <BsInstagram size="30px" />
             </span>
             <span className={css.yt}>
-              <BsYoutube />
+              <BsYoutube size="30px" />
             </span>
-            {/* <div className="flexCenter" style={{ background: exp.bg }}>
-                      <exp.icon size={25} color="white" />
-                    </div> */}
           </div>
         </div>
-        <div className={css.map}>Map</div>
       </div>
     </section>
   );

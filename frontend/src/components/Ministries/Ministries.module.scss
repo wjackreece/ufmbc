@@ -1,20 +1,119 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  background: white;
-  color: purple;
+  padding: 0 1.5rem;
+
+  color: white;
 
   .container {
-    padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
+    align-items: flex-start;
+    gap: 3rem;
+    // margin: 0 3rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .banner {
+      background-image: url("banner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 85vh;
+      margin-left: -1.5rem;
+      margin-right: -2rem;
+
+      .bannerTitle {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 5rem 3rem;
+        // margin-bottom: 3rem;
+      }
+      .bannerVerse {
+        font-size: 4rem;
+        font-family: "Hepta Slab", serif;
+        font-weight: 700;
+        margin: 0 3rem;
+        width: 60%;
+      }
+      .bannerAuthor {
+        font-size: 2rem;
+        font-family: "Hepta Slab", serif;
+        font-weight: 400;
+        margin: 1rem 3rem;
+      }
+    }
+    .desc {
+      margin: 0 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+      color: #781539;
+      margin: 5rem 15rem;
+      text-align: center;
+      font-weight: 300;
+    }
+    .ministry {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+
+      .info {
+        width: 31%;
+
+        display: flex;
+        flex-direction: column;
+
+        .minImg {
+          border-radius: 25px 25px 0 0;
+          height: 10rem;
+
+          .minImgStyle {
+            width: 100%;
+            border-radius: 25px 25px 0 0;
+          }
+        }
+
+        .minInfo {
+          background-color: #f7f7f7;
+          border-radius: 0 0 25px 25px;
+          padding: 1rem;
+
+          .minInfoTitle {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #781539;
+          }
+          .minInfoDesc {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: #727577;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+          }
+
+          button {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 800;
+            background-color: #9e752f;
+            padding: 7px 16px;
+            line-height: 1.5;
+            cursor: pointer;
+            border-radius: 999px;
+            border: none;
+            margin-top: 1.25rem;
+          }
+        }
+      }
+    }
   }
 }
