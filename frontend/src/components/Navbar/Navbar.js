@@ -69,7 +69,7 @@ const Navbar = () => {
             <a href="/">Events</a>
           </li>
           <li>
-            <a href="/">Contact Us</a>
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
         {/* This is ONLY for medium and small screens */}
