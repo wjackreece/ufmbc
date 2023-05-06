@@ -1,6 +1,9 @@
+import React, { useState } from "react";
 import css from "./Contact.module.scss";
 
 const Contact = () => {
+  const [subject, setSubject] = useState("");
+
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
@@ -29,7 +32,12 @@ const Contact = () => {
             </div>
             <div className={css.subject}>
               {/* <div className={css.subjectTitle}>Subject</div> */}
-              <select name="subject" id="">
+              <select
+                onChange={(e) => setSubject(e.target.value)}
+                name="subject"
+                id=""
+                defaultValue={subject}
+              >
                 <option value="" disabled>
                   Please select an option
                 </option>
@@ -67,5 +75,4 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;
