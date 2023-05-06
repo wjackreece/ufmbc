@@ -37,3 +37,11 @@ export const ministryInfo = [
     desc: "Proclaiming the gospel to every person in order to establish disciples for the Kingom of God",
   },
 ];
+
+export const galleryImages = [
+  {
+    id: "",
+    imageName: "",
+    tag: "",
+  },
+];

@@ -1,5 +1,7 @@
 import React from "react";
 
+import css from "./Gallery.module.scss";
+
 const Gallery = () => {
   return (
     <div className={css.wrapper}>
