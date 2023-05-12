@@ -21,9 +21,22 @@
   .container {
     margin: 0rem 2rem;
 
+    .galleryTitle {
+      font-size: 3rem;
+      // color: white;
+      color: #781539;
+      font-weight: 800;
+      margin: 2rem -4rem;
+      text-align: center;
+      // padding: 4rem;
+      // width: 120%;
+      // height: 4rem;
+    }
+
     .tags {
       text-align: center;
       padding: 20px 0;
+      margin: 2rem auto;
     }
     .imagesGrid {
       //   background: yellow;

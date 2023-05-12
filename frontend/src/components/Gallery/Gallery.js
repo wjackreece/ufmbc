@@ -25,6 +25,7 @@ const Gallery = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
+        <div className={css.galleryTitle}>Gallery</div>
         <div className={css.tags}>
           <TagButton name="all" handleSetTag={setTag} />
           <TagButton name="mlk" handleSetTag={setTag} />

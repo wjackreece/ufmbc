@@ -1,0 +1,44 @@
+.wrapper {
+  margin: 1.5rem;
+  height: 80vh;
+
+  .container {
+    margin: 0rem 2rem;
+
+    .galleryTop {
+      .galleryTitle {
+        font-size: 3rem;
+        // color: white;
+        color: #781539;
+        font-weight: 800;
+        margin: 2rem 0rem;
+        text-align: center;
+        // padding: 4rem;
+        // width: 120%;
+        // height: 4rem;
+      }
+
+      .tags {
+        text-align: center;
+        margin: 2rem auto;
+      }
+    }
+    .gallery {
+      margin-top: 3rem;
+    }
+  }
+}
+.tag {
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1.75rem;
+  margin-right: 1rem;
+  background-color: #f7f7f7;
+  color: #727577;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:on {
+    background-color: #727577b7;
+  }
+}
