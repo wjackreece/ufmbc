@@ -39,7 +39,7 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       variants={headerVariants}
-      //   viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
       style={{ boxShadow: headerShadow }}
     >
@@ -61,13 +61,11 @@ const Navbar = () => {
           <li>
             <a href="/ministries">Ministries</a>
           </li>
-          <li>
-            <a href="/">Gallery</a>
-          </li>
 
           <li>
-            <a href="/">Events</a>
+            <a href="/galleryTest">Gallery</a>
           </li>
+
           <li>
             <a href="/contact">Contact Us</a>
           </li>

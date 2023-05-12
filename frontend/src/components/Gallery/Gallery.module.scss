@@ -1,1 +1,64 @@
+.tag {
+  font-size: 1rem;
+  border: none;
+  padding: 1rem 1.75rem;
+  margin: 0 1rem;
+  border-radius: 999;
+  color: white;
+  font-weight: 600;
+  background: #781539;
+  cursor: pointer;
+  border-radius: 999px;
 
+  &:focus {
+    background: #7815394c;
+  }
+}
+
+.wrapper {
+  margin: 1.5rem;
+
+  .container {
+    margin: 0rem 2rem;
+
+    .galleryTitle {
+      font-size: 3rem;
+      // color: white;
+      color: #781539;
+      font-weight: 800;
+      margin: 2rem -4rem;
+      text-align: center;
+      // padding: 4rem;
+      // width: 120%;
+      // height: 4rem;
+    }
+
+    .tags {
+      text-align: center;
+      padding: 20px 0;
+      margin: 2rem auto;
+    }
+    .imagesGrid {
+      //   background: yellow;
+      //   width: 90%;
+      //   margin: auto;
+      //   display: grid;
+      //   grid-template-columns: repeat(4, 1fr);
+      //   gap: 10px;
+      --column-gutter: 24px;
+      --columns: 3;
+      grid-column-gap: var(--column-gutter);
+      align-items: start;
+      display: grid;
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+      row-gap: var(--row-gutter);
+      --row-gutter: 24px;
+      .imageCard {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
