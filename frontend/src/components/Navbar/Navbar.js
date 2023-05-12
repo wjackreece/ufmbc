@@ -61,15 +61,11 @@ const Navbar = () => {
           <li>
             <a href="/ministries">Ministries</a>
           </li>
+
           <li>
-            <a href="/gallery">Gallery</a>
+            <a href="/galleryTest">Gallery</a>
           </li>
-          <li>
-            <a href="/galleryTest">GalleryTEST</a>
-          </li>
-          <li>
-            <a href="/">Events</a>
-          </li>
+
           <li>
             <a href="/contact">Contact Us</a>
           </li>
