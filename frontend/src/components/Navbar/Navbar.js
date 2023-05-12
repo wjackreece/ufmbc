@@ -39,7 +39,7 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       variants={headerVariants}
-      //   viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
       style={{ boxShadow: headerShadow }}
     >
