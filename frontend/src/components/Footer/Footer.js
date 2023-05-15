@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
 
 import css from "./Footer.module.scss";
 
 const Footer = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nwvia7l",
+        "template_3hhuc7e",
+        form.current,
+        "ZuKBef1fduJ8b6ftA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    alert("Email sent");
+  };
+
   return (
     <section className={css.wrapper}>
       <div className={css.container}>
@@ -18,10 +43,10 @@ const Footer = () => {
             Sign up for our newsletter and get update emails about what is
             happening at Unity Faith Missionary Baptist Church
           </div>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <input
               type="email"
-              name="Email"
+              name="email"
               className={css.email}
               placeholder="Email"
             />
