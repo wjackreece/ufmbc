@@ -1,8 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import css from "./Contact.module.scss";
 
 const Contact = () => {
   const [subject, setSubject] = useState("");
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gvobr0a",
+        "template_6pskcu7",
+        form.current,
+        "ZuKBef1fduJ8b6ftA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    alert("Email sent");
+  };
 
   return (
     <div className={css.wrapper}>
@@ -10,7 +35,7 @@ const Contact = () => {
       {/* <h2 className={css.contactDesc}> Contact Description</h2> */}
       <div className={css.container}>
         <div className={css.contact}>
-          <div className={css.form}>
+          <form className={css.form} ref={form} onSubmit={sendEmail}>
             <div className={css.topLine}>
               <div className={css.name}>
                 <input type="text" name="name" placeholder="Name" id="" />
@@ -37,7 +62,7 @@ const Contact = () => {
                 <option value="" disabled>
                   Please select an option
                 </option>
-                <option value="admin">Administration</option>
+                <option value="administrative">Administrative</option>
                 <option value="membership">Membership</option>
                 <option value="prayer">Prayer</option>
                 <option value="other">Other</option>
@@ -52,7 +77,7 @@ const Contact = () => {
               />
             </div>
             <input type="submit" value="Submit" />
-          </div>
+          </form>
         </div>
         <div className={css.map}>
           <iframe
