@@ -6,18 +6,16 @@ const Contact = () => {
 
   return (
     <div className={css.wrapper}>
+      <h1 className={css.contactTitle}> Contact Us</h1>
+      {/* <h2 className={css.contactDesc}> Contact Description</h2> */}
       <div className={css.container}>
         <div className={css.contact}>
-          <h1 className={css.contactTitle}> Contact Us</h1>
-          {/* <h2 className={css.contactDesc}> Contact Description</h2> */}
           <div className={css.form}>
             <div className={css.topLine}>
               <div className={css.name}>
-                {/* <div className={css.nameTitle}>Name</div> */}
                 <input type="text" name="name" placeholder="Name" id="" />
               </div>
               <div className={css.phone}>
-                {/* <div className={css.phoneTitle}>Phone</div> */}
                 <input
                   type="tel"
                   name="phone"
@@ -27,11 +25,9 @@ const Contact = () => {
               </div>
             </div>
             <div className={css.email}>
-              {/* <div className={css.emailTitle}>Email</div> */}
               <input type="email" name="email" placeholder="Email" id="" />
             </div>
             <div className={css.subject}>
-              {/* <div className={css.subjectTitle}>Subject</div> */}
               <select
                 onChange={(e) => setSubject(e.target.value)}
                 name="subject"
@@ -48,7 +44,6 @@ const Contact = () => {
               </select>
             </div>
             <div className={css.mess}>
-              {/* <div className={css.messTitle}>Message</div> */}
               <input
                 type="text"
                 name="message"
