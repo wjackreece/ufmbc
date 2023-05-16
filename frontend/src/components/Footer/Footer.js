@@ -1,14 +1,38 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 
+import BasicModal from "../Modal/Modal2";
+
 import css from "./Footer.module.scss";
 
 const Footer = () => {
   const form = useRef();
+  const [open, setOpen] = useState(false);
+  const [subscriptionEmail, setSubscriptionEmail] = useState("");
 
+  const handleClose = () => setOpen(false);
+  const handleOpen = (e) => {
+    e.preventDefault();
+    // alert("i am working");
+    const validationStatus = emailValidator(subscriptionEmail);
+    if (validationStatus) {
+      setOpen(true);
+      sendEmail(e);
+      setSubscriptionEmail("");
+    } else {
+      setOpen(false);
+    }
+  };
+  const emailValidator = (emailValue) => {
+    if (!emailValue.includes("@") && emailValue.length < 6) {
+      return false;
+    } else {
+      return true;
+    }
+  };
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,8 +51,6 @@ const Footer = () => {
           console.log(error.text);
         }
       );
-
-    alert("Email sent");
   };
 
   return (
@@ -43,14 +65,21 @@ const Footer = () => {
             Sign up for our newsletter and get update emails about what is
             happening at Unity Faith Missionary Baptist Church
           </div>
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form}>
             <input
               type="email"
               name="email"
               className={css.email}
+              onChange={(e) => setSubscriptionEmail(e.target.value)}
               placeholder="Email"
+              value={subscriptionEmail}
             />
-            <input type="submit" value="Subscribe" className={css.subsc} />
+            <input
+              type="submit"
+              value="Subscribe"
+              className={css.subsc}
+              onClick={(e) => handleOpen(e)}
+            />
           </form>
         </div>
         <div className={css.contact}>
@@ -75,6 +104,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <BasicModal
+        open={open}
+        setOpen={setOpen}
+        handleOpen={handleOpen}
+        handleClose={handleClose}
+      />
     </section>
   );
 };
