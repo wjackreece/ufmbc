@@ -2,7 +2,14 @@ import * as React from "react";
 import { Modal } from "@mui/material";
 import css from "./Modal.module.scss";
 
-export default function BasicModal({ open, setOpen, handleOpen, handleClose }) {
+export default function BasicModal({
+  open,
+  setOpen,
+  handleOpen,
+  handleClose,
+  title,
+  text,
+}) {
   return (
     <div>
       <Modal
@@ -18,14 +25,10 @@ export default function BasicModal({ open, setOpen, handleOpen, handleClose }) {
               X{" "}
             </button>
             <div className={css.title}>
-              <h1>Thank You for Subscribing!</h1>
+              <h1>{title}</h1>
             </div>
             <div className={css.body}>
-              <p>
-                {" "}
-                Your information has been successfully recieved. You will be
-                receiving a confirmation email shorty.{" "}
-              </p>
+              <p>{text}</p>
             </div>
             <div className={css.footer}>
               <button

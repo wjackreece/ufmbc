@@ -4,7 +4,7 @@ import { BsFacebook } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 
-import BasicModal from "../Modal/Modal2";
+import BasicModal from "../Modal/BasicModal";
 
 import css from "./Footer.module.scss";
 
@@ -12,6 +12,7 @@ const Footer = () => {
   const form = useRef();
   const [open, setOpen] = useState(false);
   const [subscriptionEmail, setSubscriptionEmail] = useState("");
+  const [invalidEmail, setInvalidEmail] = useState(false);
 
   const handleClose = () => setOpen(false);
   const handleOpen = (e) => {
@@ -21,9 +22,10 @@ const Footer = () => {
     if (validationStatus) {
       setOpen(true);
       sendEmail(e);
-      setSubscriptionEmail("");
+      setInvalidEmail(false);
     } else {
       setOpen(false);
+      setInvalidEmail(true);
     }
   };
   const emailValidator = (emailValue) => {
@@ -81,6 +83,9 @@ const Footer = () => {
               onClick={(e) => handleOpen(e)}
             />
           </form>
+          {invalidEmail && (
+            <div className={css.invalidEmail}> Please enter a valid email.</div>
+          )}
         </div>
         <div className={css.contact}>
           <div className={css.contactTitle}>Contact Us</div>
@@ -105,6 +110,10 @@ const Footer = () => {
         </div>
       </div>
       <BasicModal
+        title={"Thank You for Subscribing!"}
+        text={
+          "Your information has been successfully recieved. You will be receiving a confirmation email shorty."
+        }
         open={open}
         setOpen={setOpen}
         handleOpen={handleOpen}
