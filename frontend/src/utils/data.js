@@ -22,31 +22,55 @@ export const ministryInfo = [
     img: bibleImg,
     title: "Bible Study",
     desc: "Guiding people to experience a relationship with God through which they come to know and do His will",
+    descDetailed:
+      "Bible Study helps to maintain our connection with God through his written Word. It reminds us of his character, promises, our dependence on him, and our future together. It familiarizes us with, and helps us grasp, the whole story of Scripture, and it keeps our souls energized.",
+    day: "Wednesdays",
+    time: "6:00 - 8:00 PM",
   },
   {
     img: menImg,
     title: "Men's Ministry",
     desc: "Spreading and celebrating the word of God among brothers through fellowship",
+    descDetailed:
+      "Men's Ministry brings men closer together in fellowship, growing, strengthening, and encouraging them to be the spiritual leaders the Lord called them to be. It is a place where men come together and grow in their spiritual journey.",
+    day: "Thursdays",
+    time: "6:00 - 8:00 PM",
   },
   {
     img: womenImg,
     title: "Women's Ministry",
     desc: "Welcoming and connecting with other women into the life and works of the Gospel",
+    descDetailed:
+      "Women's Ministry seeks to support, build up, and empower women through prayer, Bible study, and fellowship. We create a loving and caring environment for all women, especially you, allowing you to thrive for the Lord.",
+    day: "Mondays",
+    time: "6:00 - 8:00 PM",
   },
   {
     img: youthImg,
     title: "Youth Ministry",
     desc: "Connecting young people with each other and the intergenerational life of the church",
+    descDetailed:
+      "Youth Ministry seeks to create the spark within each child that will lead to a long-lasting relationship with Jesus Christ. We want children to encounter God and His works through our ministries, leading them toward healthy lifestyles and relationships.",
+    day: "Tuesdays",
+    time: "6:00 - 8:00 PM",
   },
   {
     img: choirImg,
-    title: "Praise and Worship Team",
+    title: "Praise and Worship Ministry",
     desc: "Leading God's people to adore, praise, give thanks, express emotion, and repent during worship",
+    descDetailed:
+      "The Praise and Worship Ministry guides and leads of believers through music towards God in such a way that both celebrates and glorifies Him, as well as encourages and admonishes those who follow Him. The Praise and Worship Ministry is also an avenue from which the church can express their hearts of gratitude toward God, through song, and which allows the believer to share their otherwise inexpressible and glorious joy",
+    day: "Sundays",
+    time: "6:00 - 10:15 AM",
   },
   {
     img: missionsImg,
-    title: "Missions Ministry",
-    desc: "Proclaiming the gospel to every person in order to establish disciples for the Kingom of God",
+    title: "Food Ministry",
+    desc: "Providing food for those in need throughout our community and serving the community in love.",
+    descDetailed:
+      "Food Ministry provides food and various sundry items to those in need throughout Vacaville and the surrounding area. We open our doors and invite people in, providing the sustenance they need for a healthy life.",
+    day: "Fridays",
+    time: "6:00 - 8:00 PM",
   },
 ];
 

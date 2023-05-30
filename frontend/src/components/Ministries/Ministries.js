@@ -1,5 +1,4 @@
 import React from "react";
-
 import css from "./Ministries.module.scss";
 import { ministryInfo } from "../../utils/data";
 
@@ -28,7 +27,11 @@ const Ministries = () => {
                 <div className={css.minInfo}>
                   <div className={css.minInfoTitle}>{min.title}</div>
                   <div className={css.minInfoDesc}>{min.desc}</div>
-                  <button>More Info</button>
+                  <button
+                  // onClick={}
+                  >
+                    More Info
+                  </button>
                 </div>
               </div>
             );

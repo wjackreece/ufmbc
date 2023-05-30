@@ -1,0 +1,100 @@
+.wrapper {
+  height: 100vh;
+  .container {
+    .title {
+      padding-top: 100px;
+      padding-bottom: 1px;
+      padding-left: 3rem;
+      background-color: #781539;
+      color: white;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .details {
+      margin: 2rem 3rem;
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+
+      .detailsDescrp {
+        width: 65%;
+
+        .detailsDescrpTitle {
+          letter-spacing: 1px;
+        }
+
+        .detailsDescrpInfo {
+          letter-spacing: 1px;
+          font-weight: 400;
+          line-height: 40px;
+        }
+      }
+      .detailsCard {
+        width: 35%;
+        height: fit-content;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 6px 50px rgb(194 197 204 / 40%);
+
+        .detailsCardCal {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          padding-bottom: 1.5rem;
+
+          .detailsCardCalIcon {
+            margin-top: 5px;
+          }
+
+          .detailsCardDay {
+            margin: 0;
+            letter-spacing: 1px;
+          }
+        }
+        .detailsCardTime {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          padding-bottom: 1.5rem;
+
+          .detailsCardTimeIcon {
+            margin-top: 5px;
+          }
+
+          .detailsCardTimes {
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 2rem;
+          }
+        }
+        .button {
+          display: flex;
+          gap: 2rem;
+
+          .calendarBtn {
+            width: 10rem;
+            font-size: 1.25rem;
+            border: none;
+            padding: 1rem;
+            color: #727577;
+            font-weight: 600;
+            background: #f7f7f7;
+            cursor: pointer;
+          }
+          .shareBtn {
+            width: 10rem;
+            font-size: 1.25rem;
+            border: none;
+            padding: 1rem;
+            color: white;
+            font-weight: 600;
+            background: #781539;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
