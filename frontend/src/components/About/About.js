@@ -43,7 +43,9 @@ const About = () => {
         </div>
         <div className={css.resources}>
           Looking to grow your knowledge and love for God?
-          <button>View our resources</button>
+          <a href="https://www.bible.com/bible/59/GEN.1.ESV">
+            <button>Online Bible</button>
+          </a>
         </div>
       </div>
     </div>

@@ -81,10 +81,14 @@
         }
 
         &:hover {
-          text-decoration: underline maroon;
+          text-decoration: underline #781539;
           text-underline-offset: 10px;
           color: $secondary;
         }
+      }
+      .give {
+        color: #b02457;
+        font-weight: 700;
       }
     }
   }

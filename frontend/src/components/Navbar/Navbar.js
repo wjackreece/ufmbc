@@ -69,7 +69,12 @@ const Navbar = () => {
             <a href="/contact">Contact Us</a>
           </li>
           <li>
-            <a href="/give">Give</a>
+            <a
+              className={css.give}
+              href="https://onrealm.org/UnityFaithMissi/-/form/give/now"
+            >
+              Give
+            </a>
           </li>
         </ul>
         {/* This is ONLY for medium and small screens */}
