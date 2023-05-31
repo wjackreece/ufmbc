@@ -1,11 +1,60 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
+
+import BasicModal from "../Modal/BasicModal";
 
 import css from "./Footer.module.scss";
 
 const Footer = () => {
+  const form = useRef();
+  const [open, setOpen] = useState(false);
+  const [subscriptionEmail, setSubscriptionEmail] = useState("");
+  const [invalidEmail, setInvalidEmail] = useState(false);
+
+  const handleClose = () => setOpen(false);
+  const handleOpen = (e) => {
+    e.preventDefault();
+    // alert("i am working");
+    const validationStatus = emailValidator(subscriptionEmail);
+    if (validationStatus) {
+      setOpen(true);
+      sendEmail(e);
+      setInvalidEmail(false);
+    } else {
+      setOpen(false);
+      setInvalidEmail(true);
+    }
+  };
+  const emailValidator = (emailValue) => {
+    if (!emailValue.includes("@") && emailValue.length < 6) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nwvia7l",
+        "template_3hhuc7e",
+        form.current,
+        "ZuKBef1fduJ8b6ftA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section className={css.wrapper}>
       <div className={css.container}>
@@ -18,15 +67,25 @@ const Footer = () => {
             Sign up for our newsletter and get update emails about what is
             happening at Unity Faith Missionary Baptist Church
           </div>
-          <form>
+          <form ref={form}>
             <input
               type="email"
-              name="Email"
+              name="email"
               className={css.email}
+              onChange={(e) => setSubscriptionEmail(e.target.value)}
               placeholder="Email"
+              value={subscriptionEmail}
             />
-            <input type="submit" value="Subscribe" className={css.subsc} />
+            <input
+              type="submit"
+              value="Subscribe"
+              className={css.subsc}
+              onClick={(e) => handleOpen(e)}
+            />
           </form>
+          {invalidEmail && (
+            <div className={css.invalidEmail}> Please enter a valid email.</div>
+          )}
         </div>
         <div className={css.contact}>
           <div className={css.contactTitle}>Contact Us</div>
@@ -50,6 +109,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <BasicModal
+        title={"Thank You for Subscribing!"}
+        text={
+          "Your information has been successfully recieved. You will be receiving a confirmation email shorty."
+        }
+        open={open}
+        setOpen={setOpen}
+        handleOpen={handleOpen}
+        handleClose={handleClose}
+      />
     </section>
   );
 };

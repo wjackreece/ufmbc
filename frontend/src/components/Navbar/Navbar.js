@@ -61,13 +61,15 @@ const Navbar = () => {
           <li>
             <a href="/ministries">Ministries</a>
           </li>
-
           <li>
             <a href="/galleryTest">Gallery</a>
           </li>
 
           <li>
             <a href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <a href="/give">Give</a>
           </li>
         </ul>
         {/* This is ONLY for medium and small screens */}

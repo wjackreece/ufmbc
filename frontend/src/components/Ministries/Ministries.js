@@ -1,9 +1,18 @@
 import React from "react";
-
 import css from "./Ministries.module.scss";
 import { ministryInfo } from "../../utils/data";
+import { useNavigate } from "react-router-dom";
 
 const Ministries = () => {
+  let navigate = useNavigate();
+
+  const routeChange = (e) => {
+    const target = e.target.value;
+    console.log(target);
+    const path = `/ministries/info${target}`;
+    navigate(path);
+  };
+
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
@@ -28,7 +37,9 @@ const Ministries = () => {
                 <div className={css.minInfo}>
                   <div className={css.minInfoTitle}>{min.title}</div>
                   <div className={css.minInfoDesc}>{min.desc}</div>
-                  <button>More Info</button>
+                  <button value={min.href} onClick={(e) => routeChange(e)}>
+                    More Info
+                  </button>
                 </div>
               </div>
             );
