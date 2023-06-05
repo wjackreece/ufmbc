@@ -43,7 +43,11 @@ const About = () => {
         </div>
         <div className={css.resources}>
           Looking to grow your knowledge and love for God?
-          <a href="https://www.bible.com/bible/59/GEN.1.ESV">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.bible.com/bible/59/GEN.1.ESV"
+          >
             <button>Online Bible</button>
           </a>
         </div>

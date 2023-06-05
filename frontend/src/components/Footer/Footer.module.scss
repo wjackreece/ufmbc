@@ -1,40 +1,25 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  // @media (min-width: $sm) {
-  //   padding: 4rem;
-  // }
-
-  // @media (min-width: $xl), (min-width: $md) {
-  //   padding-top: 2rem;
-  //   padding-bottom: 2rem;
-  // }
-
+  @media (max-width: $lg) {
+    margin: 0rem 1rem;
+  }
   margin: 0rem 3rem;
   color: #781539;
   background: white;
 
   .container {
-    // @media (min-width: $sm) {
-    //   padding-top: 4rem;
-    //   padding-bottom: 4rem;
-    // }
-
-    // @media (min-width: $xl) {
-    //   padding-top: 2rem;
-    //   padding-bottom: 2rem;
-    // }
-
-    // @media (min-width: $xxl) {
-    //   max-width: 1280px;
-    //   margin: auto;
-    // }
-    // @media (max-width: $sm) {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    // }
+    @media (max-width: $md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding-top: 0;
+    }
+    @media (max-width: $md) {
+      padding-top: 0;
+    }
 
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -44,17 +29,26 @@
     gap: 2rem;
     width: 100%;
 
-    // > div {
-    //   flex: 1;
-    // }
-
     .logo {
+      @media (max-width: $md) {
+        width: 50%;
+      }
       width: 20%;
       img {
         width: 100%;
       }
     }
     .newsletter {
+      @media (max-width: $xl) {
+        width: 50%;
+      }
+      @media (max-width: $lg) {
+        width: 50%;
+      }
+      @media (max-width: $md) {
+        width: 80%;
+      }
+
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -64,12 +58,23 @@
       gap: 1rem;
 
       .newsletterTitle {
+        @media (max-width: $md) {
+          text-align: center;
+          font-size: 2rem;
+        }
+        @media (max-width: $lg) {
+          text-align: center;
+        }
         font-size: 1rem;
         font-weight: 800;
         letter-spacing: 0.5px;
       }
 
       .newsletterDesc {
+        @media (max-width: $md) {
+          font-size: 1.25rem;
+        }
+
         font-size: 1rem;
         font-weight: 300;
         letter-spacing: 1px;
@@ -78,6 +83,9 @@
         width: 100%;
 
         .email {
+          @media (max-width: $lg) {
+            width: 57%;
+          }
           width: 60%;
           background-color: #f7f7f7;
           font-size: 1rem;
@@ -101,6 +109,16 @@
     }
 
     .contact {
+      @media (max-width: $xl) {
+        width: 21%;
+      }
+      @media (max-width: $lg) {
+        width: 35%;
+      }
+      @media (max-width: $md) {
+        width: 80%;
+      }
+
       width: 20%;
       display: flex;
       flex-direction: column;
@@ -109,19 +127,48 @@
       gap: 1rem;
 
       .contactTitle {
+        @media (max-width: $md) {
+          font-size: 2rem;
+          text-align: center;
+        }
+        @media (max-width: $lg) {
+          text-align: center;
+        }
         font-size: 1rem;
         letter-spacing: 0.5px;
         font-weight: 800;
       }
-      .address {
-        font-size: 1rem;
-        font-weight: 300;
-        letter-spacing: 1px;
-      }
-      .phone {
-        font-size: 1rem;
-        font-weight: 300;
-        letter-spacing: 1px;
+      .addrAndPhone {
+        @media (max-width: $xl) {
+          display: flex;
+          gap: 0.5rem;
+          flex-direction: column;
+        }
+        @media (max-width: $md) {
+          font-size: 2rem;
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          width: 100%;
+          justify-content: space-evenly;
+        }
+
+        .address {
+          @media (max-width: $md) {
+            font-size: 1.25rem;
+          }
+          font-size: 1rem;
+          font-weight: 300;
+          letter-spacing: 1px;
+        }
+        .phone {
+          @media (max-width: $md) {
+            font-size: 1.25rem;
+          }
+          font-size: 1rem;
+          font-weight: 300;
+          letter-spacing: 1px;
+        }
       }
       .fax {
         font-size: 1rem;
@@ -130,6 +177,14 @@
       }
 
       .icons {
+        @media (max-width: $md) {
+          text-align: center;
+          margin-top: 2rem;
+        }
+        @media (max-width: $lg) {
+          display: flex;
+          justify-content: center;
+        }
         span {
           margin-right: 1.5rem;
         }

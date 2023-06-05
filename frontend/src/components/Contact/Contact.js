@@ -4,6 +4,7 @@ import css from "./Contact.module.scss";
 import BasicModal from "../Modal/BasicModal";
 
 const Contact = () => {
+  const [phoneNum, setPhoneNum] = useState("");
   const [open, setOpen] = useState(false);
   const [subscriptionEmail, setSubscriptionEmail] = useState("");
   const [formName, setFormName] = useState("");
@@ -13,6 +14,41 @@ const Contact = () => {
   const [invalidName, setInvalidName] = useState(false);
   const [invalidSubject, setInvalidSubject] = useState(false);
   const [invalidMessage, setInvalidMessage] = useState(false);
+
+  function getFormattedPhoneNum(input) {
+    let output = "(";
+    input.replace(
+      /^\D*(\d{0,3})\D*(\d{0,3})\D*(\d{0,4})/,
+      function (match, g1, g2, g3) {
+        if (g1.length) {
+          output += g1;
+          if (g1.length === 3) {
+            output += ")";
+            if (g2.length) {
+              output += " " + g2;
+              if (g2.length === 3) {
+                output += " - ";
+                if (g3.length) {
+                  output += g3;
+                }
+              }
+            }
+          }
+        }
+      }
+    );
+    return output;
+  }
+
+  // console.log(getFormattedPhoneNum(""));
+  // console.log(getFormattedPhoneNum("2"));
+  // console.log(getFormattedPhoneNum("asdf20as3d"));
+  // console.log(getFormattedPhoneNum("203"));
+  // console.log(getFormattedPhoneNum("203-44"));
+  // console.log(getFormattedPhoneNum("444sg52asdf22fd44gs"));
+  // console.log(getFormattedPhoneNum("444sg526sdf22fd44gs"));
+  // console.log(getFormattedPhoneNum("444sg526sdf2244gs"));
+  // console.log(getFormattedPhoneNum(" ra098 848 73653k-atui "));
 
   const form = useRef();
   const handleClose = () => setOpen(false);
@@ -127,12 +163,28 @@ const Contact = () => {
                   name="phone"
                   placeholder="Phone Number"
                   id=""
-                  onKeyDown={(evt) =>
-                    isNaN(evt.key) &&
-                    evt.key !== "Backspace" &&
-                    evt.key !== "Tab" &&
-                    evt.preventDefault()
-                  }
+                  value={phoneNum}
+                  onKeyDown={(evt) => {
+                    if (
+                      isNaN(evt.key) &&
+                      evt.key !== "Backspace" &&
+                      evt.key !== "Tab"
+                    ) {
+                      evt.preventDefault();
+                    } else {
+                      if (!isNaN(evt.key)) {
+                        const formattedNum = getFormattedPhoneNum(
+                          phoneNum + evt.key
+                        );
+                        setPhoneNum(formattedNum);
+                      }
+                      if (evt.key === "Backspace") {
+                        const prevNum = phoneNum.slice(0, -1);
+                        setPhoneNum(prevNum);
+                        console.log(prevNum);
+                      }
+                    }
+                  }}
                   // onKeyDown={(evt) => console.log(evt.key)}
                 />
               </div>

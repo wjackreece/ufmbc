@@ -20,7 +20,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const updateWindowDimensions = () => {
-      const newScreenWidth = window.innerWidth;
+      const newScreenWidth = window.outerWidth;
       console.log(newScreenWidth);
       if (newScreenWidth > 768) {
         setMenuHidden(true);
