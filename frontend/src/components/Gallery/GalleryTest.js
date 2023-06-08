@@ -32,7 +32,7 @@ const GalleryTest = () => {
     return (
       <button
         className={css.tag}
-        style={{ backgroundColor: tag == name ? "#727577b7" : "#f7f7f7" }}
+        style={{ backgroundColor: tag === name ? "#727577b7" : "#f7f7f7" }}
         onClick={() => handleSetTag(name)}
       >
         {name.toUpperCase()}
@@ -47,16 +47,16 @@ const GalleryTest = () => {
           <div className={css.galleryTitle}>Gallery</div>
           <div className={css.tags}>
             <TagButton name="all" handleSetTag={setTag} />
-            <TagButton name="mlk" handleSetTag={setTag} />
-            <TagButton name="mlk2" handleSetTag={setTag} />
-            <TagButton name="mlk3" handleSetTag={setTag} />
+            <TagButton name="Event Flyers" handleSetTag={setTag} />
+            <TagButton name="MLK Parade" handleSetTag={setTag} />
+            <TagButton name="Valentine's Dinner" handleSetTag={setTag} />
           </div>
         </div>
         <div className={css.gallery}>
           <PhotoAlbum
             photos={filteredImages}
-            layout="columns"
-            targetRowHeight={150}
+            layout="rows"
+            targetRowHeight={200}
             onClick={({ index }) => setIndex(index)}
           />
 

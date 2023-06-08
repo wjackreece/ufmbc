@@ -21,17 +21,16 @@
       padding-top: 0;
     }
 
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
-    width: 100%;
 
     .logo {
       @media (max-width: $md) {
         width: 50%;
+        margin-top: 3rem;
       }
       width: 20%;
       img {
@@ -58,6 +57,9 @@
       gap: 1rem;
 
       .newsletterTitle {
+        @media (min-width: $xl) {
+          font-size: 1.25rem;
+        }
         @media (max-width: $md) {
           text-align: center;
           font-size: 2rem;
@@ -65,12 +67,16 @@
         @media (max-width: $lg) {
           text-align: center;
         }
+        text-align: center;
         font-size: 1rem;
         font-weight: 800;
         letter-spacing: 0.5px;
       }
 
       .newsletterDesc {
+        @media (min-width: $xl) {
+          font-size: 1.25rem;
+        }
         @media (max-width: $md) {
           font-size: 1.25rem;
         }
@@ -83,8 +89,14 @@
         width: 100%;
 
         .email {
+          @media (min-width: $xl) {
+            width: 59%;
+          }
+          @media (max-width: $xl) {
+            width: 59%;
+          }
           @media (max-width: $lg) {
-            width: 57%;
+            width: 55%;
           }
           width: 60%;
           background-color: #f7f7f7;
@@ -110,10 +122,10 @@
 
     .contact {
       @media (max-width: $xl) {
-        width: 21%;
+        width: 22%;
       }
       @media (max-width: $lg) {
-        width: 35%;
+        width: 31%;
       }
       @media (max-width: $md) {
         width: 80%;
@@ -127,6 +139,9 @@
       gap: 1rem;
 
       .contactTitle {
+        @media (min-width: $xl) {
+          font-size: 1.25rem;
+        }
         @media (max-width: $md) {
           font-size: 2rem;
           text-align: center;
@@ -134,11 +149,17 @@
         @media (max-width: $lg) {
           text-align: center;
         }
+        text-align: center;
         font-size: 1rem;
         letter-spacing: 0.5px;
         font-weight: 800;
       }
       .addrAndPhone {
+        @media (min-width: $xl) {
+          display: flex;
+          gap: 0.5rem;
+          flex-direction: column;
+        }
         @media (max-width: $xl) {
           display: flex;
           gap: 0.5rem;
@@ -154,6 +175,10 @@
         }
 
         .address {
+          @media (min-width: $xl) {
+            font-size: 1.25rem;
+          }
+
           @media (max-width: $md) {
             font-size: 1.25rem;
           }
@@ -162,6 +187,9 @@
           letter-spacing: 1px;
         }
         .phone {
+          @media (min-width: $xl) {
+            font-size: 1.25rem;
+          }
           @media (max-width: $md) {
             font-size: 1.25rem;
           }

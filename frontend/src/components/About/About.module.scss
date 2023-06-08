@@ -1,15 +1,6 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  // @media (min-width: $sm) {
-  //   padding: 4rem;
-  // }
-
-  // @media (min-width: $xl), (min-width: $md) {
-  //   padding-top: 2rem;
-  //   padding-bottom: 2rem;
-  // }
-
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1.5rem;
@@ -17,43 +8,42 @@
   background: white;
 
   .container {
-    // @media (min-width: $sm) {
-    //   padding-top: 4rem;
-    //   padding-bottom: 4rem;
-    // }
-
-    // @media (min-width: $xl) {
-    //   padding-top: 2rem;
-    //   padding-bottom: 2rem;
-    // }
-    // @media (min-width: $xxl) {
-    //   max-width: 1280px;
-    //   margin: auto;
-    // }
-    // @media (max-width: $sm) {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    // }
-    padding-top: 3rem;
-    padding-bottom: 3rem;
     width: 100%;
 
     .about {
+      @media (max-width: $md) {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0px 1rem;
+      }
       font-size: 2.5rem;
       font-weight: 800;
       margin: 0 3rem;
     }
 
     .service {
+      @media (max-width: $md) {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      padding: 2.5rem 0rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem -2rem;
-      padding: 2.5rem;
 
       .serviceImg {
+        @media (max-width: $md) {
+          width: 0%;
+          padding: 0;
+          height: 0;
+          background-image: none;
+          opacity: 0;
+          box-shadow: none;
+        }
+
         width: 48%;
         padding: 2rem;
         height: 15rem;
@@ -64,24 +54,69 @@
       }
 
       .serviceInfo {
-        background-color: #78153984;
-        width: 37%;
-        padding: 2rem;
-        color: white;
+        @media (max-width: $md) {
+          width: 85%;
+        }
+
+        background-color: white;
+
+        color: #727577;
 
         .serviceTitle {
-          font-weight: 800;
-          font-size: 2rem;
+          @media (min-width: $xl) {
+            font-size: 5.5rem;
+          }
+          @media (max-width: $xl) {
+            font-size: 4.5rem;
+          }
+          @media (max-width: $lg) {
+            letter-spacing: 1px;
+          }
+          color: #781539;
+          font-family: "Cookie", cursive;
+          font-size: 3rem;
           margin-bottom: 1rem;
         }
         .serviceTimes {
+          @media (min-width: $xl) {
+            font-size: 2rem;
+            line-height: 2.75rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+          }
+          @media (max-width: $md) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+          }
+
           font-size: 1.5rem;
           font-weight: 575;
           line-height: 2.25rem;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          text-align: left;
+          justify-content: flex-start;
+          align-content: center;
         }
       }
     }
     .churchStatements {
+      @media (min-width: $xl) {
+        gap: 5rem;
+      }
+      @media (max-width: $xl) {
+        gap: 3rem;
+      }
+      @media (max-width: $lg) {
+        gap: 2rem;
+      }
+      @media (max-width: $md) {
+        gap: 2.5rem;
+      }
+      padding: 1rem 0;
       width: 100%;
       gap: 7rem;
       display: flex;
@@ -89,6 +124,12 @@
       justify-content: center;
 
       .purpose {
+        @media (max-width: $xl) {
+          width: 38%;
+        }
+        @media (max-width: $md) {
+          width: 80%;
+        }
         width: 30%;
         text-align: center;
         background-color: #f7f7f7;
@@ -96,6 +137,14 @@
         padding: 2rem;
 
         .purposeTitle {
+          @media (max-width: $lg) {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+          }
+
+          @media (max-width: $md) {
+            margin-bottom: 0.5rem;
+          }
           font-size: 2rem;
           font-weight: 800;
           margin-bottom: 1.5rem;
@@ -103,6 +152,9 @@
         }
 
         .purposeInfo {
+          @media (max-width: $lg) {
+            font-size: 1.25rem;
+          }
           font-size: 1.5rem;
           text-align: center;
           line-height: 1.5;
@@ -110,6 +162,12 @@
         }
       }
       .mission {
+        @media (max-width: $xl) {
+          width: 38%;
+        }
+        @media (max-width: $md) {
+          width: 80%;
+        }
         width: 30%;
         gap: 1rem;
         text-align: center;
@@ -118,6 +176,13 @@
         padding: 2rem;
 
         .missionTitle {
+          @media (max-width: $lg) {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+          }
+          @media (max-width: $md) {
+            margin-bottom: 0.5rem;
+          }
           font-size: 2rem;
           font-weight: 800;
           margin-bottom: 1.5rem;
@@ -125,6 +190,9 @@
         }
 
         .missionInfo {
+          @media (max-width: $lg) {
+            font-size: 1.25rem;
+          }
           font-size: 1.5rem;
           text-align: center;
           line-height: 1.5;
@@ -133,6 +201,18 @@
       }
     }
     .resources {
+      @media (max-width: $xl) {
+        margin: 3rem 1rem;
+        font-size: 3rem;
+      }
+      @media (max-width: $lg) {
+        margin: 3rem 1rem;
+        font-size: 2.5rem;
+      }
+      @media (max-width: $md) {
+        font-size: 2.25rem;
+        margin: 3rem;
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -148,6 +228,17 @@
       border: 1px solid #510e27;
 
       button {
+        @media (max-width: $xl) {
+          padding: 10px 25px;
+        }
+        @media (max-width: $lg) {
+          padding: 10px 25px;
+        }
+
+        @media (max-width: $md) {
+          padding: 10px 20px;
+        }
+
         color: white;
         font-size: 1.5rem;
         font-weight: 800;

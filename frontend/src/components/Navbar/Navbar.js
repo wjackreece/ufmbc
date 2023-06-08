@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 import css from "./Navbar.module.scss";
 import { motion } from "framer-motion";
@@ -9,7 +9,6 @@ import useOutsideAlerter from "../../hooks/useHeaderShadow";
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const [menuHidden, setMenuHidden] = useState(true);
   const headerShadow = useHeaderShadow();
   const menuRef = useRef();
 
@@ -17,22 +16,6 @@ const Navbar = () => {
     menuRef,
     setMenuOpened,
   });
-
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      const newScreenWidth = window.outerWidth;
-      console.log(newScreenWidth);
-      if (newScreenWidth > 768) {
-        setMenuHidden(true);
-      } else {
-        setMenuHidden(false);
-      }
-    };
-
-    window.addEventListener("resize", updateWindowDimensions);
-
-    return () => window.removeEventListener("resize", updateWindowDimensions);
-  }, []);
 
   return (
     <motion.div
@@ -78,14 +61,13 @@ const Navbar = () => {
           </li>
         </ul>
         {/* This is ONLY for medium and small screens */}
-        {!menuHidden && (
-          <div
-            className={css.menuIcon}
-            onClick={() => setMenuOpened((prev) => !prev)}
-          >
-            <BiMenuAltRight size={30} />
-          </div>
-        )}
+
+        <div
+          className={css.menuIcon}
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
+          <BiMenuAltRight size={30} />
+        </div>
       </div>
     </motion.div>
   );
