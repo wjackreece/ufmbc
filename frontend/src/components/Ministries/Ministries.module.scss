@@ -1,34 +1,67 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  padding: 0 1.5rem;
-
   color: white;
 
   .container {
+    @media (max-width: $xl) {
+      padding-bottom: 0;
+    }
     padding-bottom: 3rem;
     display: flex;
     align-items: flex-start;
-    gap: 3rem;
+    // gap: 3rem;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
 
     .banner {
+      @media (max-width: $xl) {
+        height: 70vh;
+      }
+      @media (max-width: $lg) {
+        height: 55vh;
+      }
+
       background-image: url("banner.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       height: 85vh;
-      margin-left: -1.5rem;
-      margin-right: -2rem;
 
       .bannerTitle {
+        @media (max-width: $xl) {
+          font-size: 2rem;
+          margin: 4rem 3rem;
+        }
+        @media (max-width: $lg) {
+          font-size: 1.5rem;
+          margin: 3rem 3rem;
+        }
+        @media (max-width: $md) {
+          font-size: 2rem;
+          margin: 2.5rem 1rem;
+        }
+
         font-size: 2rem;
         font-weight: 800;
         margin: 5rem 3rem;
         // margin-bottom: 3rem;
       }
       .bannerVerse {
+        @media (max-width: $md) {
+          margin: 0 1rem;
+          margin-bottom: 1rem;
+          font-size: 2rem;
+        }
+        @media (max-width: $lg) {
+          font-size: 2rem;
+          width: 75%;
+        }
+
+        @media (max-width: $xl) {
+          font-size: 3rem;
+          width: 85%;
+        }
         font-size: 4rem;
         font-family: "Hepta Slab", serif;
         font-weight: 700;
@@ -36,6 +69,14 @@
         width: 60%;
       }
       .bannerAuthor {
+        @media (max-width: $md) {
+          margin: 0 1rem;
+          font-size: 1rem;
+        }
+        @media (max-width: $lg) {
+          font-size: 1.25rem;
+        }
+
         font-size: 2rem;
         font-family: "Hepta Slab", serif;
         font-weight: 400;
@@ -43,6 +84,19 @@
       }
     }
     .desc {
+      @media (max-width: $xl) {
+        margin: 4rem 3rem;
+        font-size: 2rem;
+      }
+      @media (max-width: $lg) {
+        margin: 3rem 3rem;
+        font-size: 1.75rem;
+      }
+      @media (max-width: $md) {
+        margin: 3rem 3rem;
+        font-size: 1.5rem;
+      }
+
       margin: 0 3rem;
       display: flex;
       flex-direction: column;
@@ -66,12 +120,31 @@
       margin-bottom: 5rem;
 
       .info {
+        @media (max-width: $xl) {
+          width: 28%;
+        }
+        @media (max-width: $lg) {
+          width: 45%;
+        }
+        @media (max-width: $md) {
+          width: 60%;
+        }
+
         width: 31%;
         display: flex;
         flex-direction: column;
         height: 100%;
 
         .minImg {
+          @media (max-width: $xl) {
+            height: 9rem;
+          }
+          @media (max-width: $lg) {
+            height: 12rem;
+          }
+          @media (max-width: $md) {
+            height: 11rem;
+          }
           border-radius: 25px 25px 0 0;
           height: 10rem;
 
@@ -82,11 +155,17 @@
         }
 
         .minInfo {
+          @media (max-width: $xl) {
+            height: 41vh;
+          }
+          @media (max-width: $lg) {
+            height: 45vh;
+          }
           background-color: #f7f7f7;
           border-radius: 0 0 25px 25px;
           padding: 1rem;
           padding-bottom: 2rem;
-          height: 15rem;
+          height: fit-content;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
@@ -95,12 +174,21 @@
         }
 
         .minInfoTitle {
+          @media (max-width: $lg) {
+            margin-bottom: 0;
+          }
           font-size: 1.75rem;
           font-weight: 800;
           margin-bottom: 1rem;
           color: #781539;
         }
         .minInfoDesc {
+          @media (max-width: $xl) {
+            font-size: 1.25rem;
+          }
+          @media (max-width: $lg) {
+            font-size: 1.5rem;
+          }
           font-size: 1.5rem;
           line-height: 1.5;
           color: #727577;

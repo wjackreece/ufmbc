@@ -6,17 +6,16 @@ const About = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
-        <div className={css.about}>
-          About Unity Faith Missionary Baptist Church
-        </div>
         <div className={css.service}>
-          <div className={css.serviceImg}>Image</div>
+          {/* <div className={css.serviceImg}></div> */}
           <div className={css.serviceInfo}>
-            <div className={css.serviceTitle}>Sunday Morning Service Times</div>
+            <div className={css.serviceTitle}>
+              Join Us for Sunday Morning Service{" "}
+            </div>
             <div className={css.serviceTimes}>
               Bible Study: 9 a.m. - 10 a.m.
               <br />
-              Worship Service: 10:15 a.m. - 12:30 p.m.
+              Worship Service: 10:30 a.m.
               <br />
               Communion: 1st Sunday
               <br />
@@ -43,7 +42,11 @@ const About = () => {
         </div>
         <div className={css.resources}>
           Looking to grow your knowledge and love for God?
-          <a href="https://www.bible.com/bible/59/GEN.1.ESV">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.bible.com/bible/59/GEN.1.ESV"
+          >
             <button>Online Bible</button>
           </a>
         </div>

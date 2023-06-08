@@ -89,12 +89,14 @@ const Footer = () => {
         </div>
         <div className={css.contact}>
           <div className={css.contactTitle}>Contact Us</div>
-          <div className={css.address}>
-            1620 39TH Street SW <br /> Naples, FL 34117
-          </div>
-          <div className={css.phone}>
-            Phone: (239) 353-6604 <br />
-            Fax: (239) 353-6605
+          <div className={css.addrAndPhone}>
+            <div className={css.address}>
+              1620 39TH Street SW <br /> Naples, FL 34117
+            </div>
+            <div className={css.phone}>
+              Phone: (239) 353-6604 <br />
+              Fax: (239) 353-6605
+            </div>
           </div>
           <div className={css.icons}>
             <span className={css.fb}>
