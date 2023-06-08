@@ -6,6 +6,7 @@ import { getMenuStyles, headerVariants } from "../../utils/motion";
 import { BiMenuAltRight } from "react-icons/bi";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useHeaderShadow";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -36,25 +37,27 @@ const Navbar = () => {
           className={`flexCenter ${css.menu}`}
         >
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           {/* <li>
             <a href="/about">About Us</a>
           </li> */}
           <li>
-            <a href="/ministries">Ministries</a>
+            <Link to="/ministries">Ministries</Link>
           </li>
           <li>
-            <a href="/gallery">Gallery</a>
+            <Link to="/gallery">Gallery</Link>
           </li>
 
           <li>
-            <a href="/contact">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
             <a
               className={css.give}
+              rel="noreferrer"
               href="https://onrealm.org/UnityFaithMissi/-/form/give/now"
+              target="_blank"
             >
               Give
             </a>
