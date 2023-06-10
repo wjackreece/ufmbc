@@ -8,9 +8,10 @@ const Home = () => {
     <div>
       <div className={css.wrapper}>
         <div className={css.container}>
-          <div className={css.homeTextLine1}>Love God.</div>
-          <div className={css.homeTextLine2}>Love People.</div>
-          <div className={css.homeTextLine3}>Make disciples of Christ.</div>
+          <div className={css.homeText}>
+            <div className={css.homeTextLine1}>Proclaiming Jesus Christ</div>
+            <div className={css.homeTextLine2}>and Making Disciples</div>
+          </div>
         </div>
       </div>
       <About />

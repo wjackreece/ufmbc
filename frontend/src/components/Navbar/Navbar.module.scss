@@ -4,6 +4,9 @@
   @media (max-width: $md) {
     padding: 2rem 1rem;
   }
+  @media (max-width: $xs) {
+    padding: 1rem 1rem;
+  }
   padding: 3rem 3rem;
   position: relative;
   z-index: 99;

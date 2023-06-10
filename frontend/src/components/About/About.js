@@ -9,18 +9,8 @@ const About = () => {
         <div className={css.service}>
           {/* <div className={css.serviceImg}></div> */}
           <div className={css.serviceInfo}>
-            <div className={css.serviceTitle}>
-              Join Us for Sunday Morning Service{" "}
-            </div>
-            <div className={css.serviceTimes}>
-              Bible Study: 9 a.m. - 10 a.m.
-              <br />
-              Worship Service: 10:30 a.m.
-              <br />
-              Communion: 1st Sunday
-              <br />
-              Youth Sunday: 2nd Sunday
-            </div>
+            <div className={css.serviceTitle}>Join Us for Worship Service </div>
+            <div className={css.serviceTimes}>Every Sunday at 10:30 a.m.</div>
           </div>
         </div>
         <div className={css.churchStatements}>
