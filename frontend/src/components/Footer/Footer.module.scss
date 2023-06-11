@@ -178,6 +178,9 @@
           width: 100%;
           justify-content: space-evenly;
         }
+        @media (max-width: $xxs) {
+          gap: 0.5rem;
+        }
 
         .address {
           @media (min-width: $xl) {
