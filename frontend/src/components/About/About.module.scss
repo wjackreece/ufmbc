@@ -28,6 +28,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0rem;
+        padding-bottom: 2rem;
+      }
+      @media (max-width: $sm) {
+        padding: 0;
+        padding-bottom: 2rem;
       }
       @media (max-width: $xs) {
         padding-top: 0rem;
@@ -59,6 +65,14 @@
           @media (max-width: $lg) {
             letter-spacing: 1px;
           }
+          @media (max-width: $md) {
+            font-size: 3.5rem;
+            margin-bottom: 0.25rem;
+          }
+          @media (max-width: $sm) {
+            font-size: 2.2rem;
+            margin-bottom: 0.25rem;
+          }
           @media (max-width: $xs) {
             font-size: 2.5rem;
             margin-bottom: 0.25rem;
@@ -83,6 +97,10 @@
             line-height: 2rem;
             letter-spacing: 1px;
             font-weight: 500;
+          }
+          @media (max-width: $sm) {
+            font-size: 1rem;
+            line-height: 1.5rem;
           }
           @media (max-width: $xs) {
             font-size: 1rem;
@@ -113,9 +131,9 @@
       }
       @media (max-width: $md) {
         gap: 2.5rem;
+        padding: 0;
       }
       @media (max-width: $md) {
-        padding: 0;
       }
       padding: 1rem 0;
       width: 100%;
@@ -130,6 +148,10 @@
         }
         @media (max-width: $md) {
           width: 80%;
+        }
+        @media (max-width: $sm) {
+          width: 100%;
+          padding: 1rem;
         }
         @media (max-width: $xs) {
           width: 100%;
@@ -151,6 +173,10 @@
           @media (max-width: $md) {
             margin-bottom: 0.5rem;
           }
+          @media (max-width: $sm) {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
           @media (max-width: $xs) {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -164,6 +190,9 @@
         .purposeInfo {
           @media (max-width: $lg) {
             font-size: 1.25rem;
+          }
+          @media (max-width: $sm) {
+            font-size: 1rem;
           }
           @media (max-width: $xs) {
             font-size: 1rem;
@@ -180,6 +209,10 @@
         }
         @media (max-width: $md) {
           width: 80%;
+        }
+        @media (max-width: $sm) {
+          width: 100%;
+          padding: 1rem;
         }
         @media (max-width: $xs) {
           width: 100%;
@@ -201,6 +234,10 @@
           @media (max-width: $md) {
             margin-bottom: 0.5rem;
           }
+          @media (max-width: $sm) {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
           @media (max-width: $xs) {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -214,6 +251,9 @@
         .missionInfo {
           @media (max-width: $lg) {
             font-size: 1.25rem;
+          }
+          @media (max-width: $sm) {
+            font-size: 1rem;
           }
           @media (max-width: $xs) {
             font-size: 1rem;
@@ -235,8 +275,14 @@
         font-size: 2.5rem;
       }
       @media (max-width: $md) {
-        font-size: 2.25rem;
-        margin: 3rem;
+        font-size: 2rem;
+        margin: 3rem 2rem 0rem 2rem;
+      }
+      @media (max-width: $sm) {
+        font-size: 1.25rem;
+        margin: 0;
+        margin-top: 2.5rem;
+        padding: 1rem;
       }
       @media (max-width: $xs) {
         font-size: 1.25rem;
@@ -267,10 +313,11 @@
         }
 
         @media (max-width: $md) {
-          padding: 10px 20px;
+          margin-top: 0rem;
+          padding: 5px 20px;
         }
-        @media (max-width: $md) {
-          padding: 10px 15px;
+        @media (max-width: $sm) {
+          padding: 5px 15px;
           font-size: 1rem;
           margin-top: 0rem;
         }

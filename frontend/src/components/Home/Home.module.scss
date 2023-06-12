@@ -5,10 +5,14 @@
     padding: 10rem 3rem;
   }
   @media (max-width: $lg) {
-    padding: 4rem 2rem;
+    padding: 2rem;
   }
   @media (max-width: $md) {
-    padding: 5rem 2rem;
+    padding: 1rem 1rem;
+  }
+  @media (max-width: $sm) {
+    background-position: center;
+    padding: 1rem;
   }
   @media (max-width: $xs) {
     padding: 6rem 1rem 0rem 1rem;
@@ -34,17 +38,32 @@
       padding: 4.5rem 1rem;
     }
     @media (max-width: $lg) {
-      font-size: 3.5rem;
-      height: 60%;
+      padding: 0;
+      text-align: center;
+      padding-top: 13rem;
+      font-size: 3rem;
     }
     @media (max-width: $md) {
       font-size: 3rem;
+      padding: 0;
+      padding-top: 10rem;
+      font-size: 2.25rem;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: $sm) {
+      padding: 0;
+      padding-top: 10rem;
+      font-size: 1.7rem;
+      text-align: center;
+      padding-bottom: 1rem;
     }
     @media (max-width: $xs) {
       font-size: 1.55rem;
       padding: 0;
     }
-    @media (max-width: $xs) {
+    @media (max-width: $xxs) {
       font-size: 1.25rem;
       padding: 0;
     }
