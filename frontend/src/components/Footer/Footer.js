@@ -99,15 +99,30 @@ const Footer = () => {
             </div>
           </div>
           <div className={css.icons}>
-            <span className={css.fb}>
+            <a
+              href="https://www.facebook.com/UnityFaithMissionaryBaptistChurch/"
+              target="_blank"
+              rel="noreferrer"
+              className={css.fb}
+            >
               <BsFacebook size="30px" />
-            </span>
-            <span className={css.insta}>
+            </a>
+            <a
+              href="/about"
+              target="_blank"
+              rel="noreferrer"
+              className={css.insta}
+            >
               <BsInstagram size="30px" />
-            </span>
-            <span className={css.yt}>
-              <BsYoutube size="30px" />
-            </span>
+            </a>
+            <a
+              href="/about"
+              target="_blank"
+              rel="noreferrer"
+              className={css.yt}
+            >
+              <BsYoutube size="30px" color="#781539" />
+            </a>
           </div>
         </div>
       </div>
