@@ -3,8 +3,6 @@
 .wrapper {
   @media (min-width: $xl) {
     padding: 3rem;
-    padding-top: 24rem;
-    padding-bottom: 4.5rem;
   }
   @media (max-width: $lg) {
     padding: 2rem;
@@ -28,6 +26,7 @@
   background-image: url("UFMBCpic3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: white;
   text-shadow: 1px 2px 2px black;
   font-size: 3rem;
