@@ -3,6 +3,9 @@ import css from "./Ministries.module.scss";
 import { ministryInfo } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 
+import { motion } from "framer-motion";
+import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
+
 const Ministries = () => {
   let navigate = useNavigate();
 
@@ -14,7 +17,13 @@ const Ministries = () => {
   };
 
   return (
-    <div className={css.wrapper}>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={css.wrapper}
+    >
       <div className={css.container}>
         <div className={css.banner}>
           <div className={css.bannerTitle}>Ministries</div>
@@ -23,11 +32,17 @@ const Ministries = () => {
           </div>
           <div className={css.bannerAuthor}>Matthew 23:11</div>
         </div>
-        <div className={css.desc}>
+        <motion.div
+          variants={fadeIn("up", "tween", 0.5, 0.5)}
+          className={css.desc}
+        >
           Find a space where you can fellowship, learn, and serve alongside
           brothers and sisters in Christ
-        </div>
-        <div className={css.ministry}>
+        </motion.div>
+        <motion.div
+          variants={fadeIn("up", "tween", 0.5, 0.5)}
+          className={css.ministry}
+        >
           {ministryInfo.map((min, i) => {
             return (
               <div className={css.info} key={i}>
@@ -44,9 +59,9 @@ const Ministries = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

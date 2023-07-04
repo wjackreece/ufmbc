@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import css from "./Contact.module.scss";
 import BasicModal from "../Modal/BasicModal";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 const Contact = () => {
   const [phoneNum, setPhoneNum] = useState("");
@@ -124,11 +126,26 @@ const Contact = () => {
   };
 
   return (
-    <div className={css.wrapper}>
-      <h1 className={css.contactTitle}> Contact Us</h1>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={css.wrapper}
+    >
+      <motion.h1
+        variants={fadeIn("up", "tween", 0.5, 0.5)}
+        className={css.contactTitle}
+      >
+        {" "}
+        Contact Us
+      </motion.h1>
       {/* <h2 className={css.contactDesc}> Contact Description</h2> */}
       <div className={css.container}>
-        <div className={css.contact}>
+        <motion.div
+          variants={fadeIn("right", "tween", 0.5, 0.5)}
+          className={css.contact}
+        >
           <form
             className={css.form}
             ref={form}
@@ -249,8 +266,11 @@ const Contact = () => {
               onClick={(e) => handleOpen(e)}
             />
           </form>
-        </div>
-        <div className={css.map}>
+        </motion.div>
+        <motion.div
+          variants={fadeIn("left", "tween", 0.5, 0.5)}
+          className={css.map}
+        >
           <iframe
             title="map"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2198.405440065677!2d-81.6879793916547!3d26.19914315406286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db02b42a3b96b9%3A0xa37367714c7d3fbe!2sUnity%20Faith%20Missionary%20Baptist.%20Please%20add%20the%20time%20for%20Sunday%20worship%20Service!5e0!3m2!1sen!2sus!4v1683297949514!5m2!1sen!2sus"
@@ -261,7 +281,7 @@ const Contact = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+        </motion.div>
       </div>
       <BasicModal
         title={"Thank You for Contacting Us!"}
@@ -273,7 +293,7 @@ const Contact = () => {
         handleOpen={handleOpen}
         handleClose={handleClose}
       />
-    </div>
+    </motion.div>
   );
 };
 export default Contact;

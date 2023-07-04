@@ -3,6 +3,8 @@ import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 import BasicModal from "../Modal/BasicModal";
 
@@ -56,8 +58,17 @@ const Footer = () => {
   };
 
   return (
-    <section className={css.wrapper}>
-      <div className={css.container}>
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={css.wrapper}
+    >
+      <motion.div
+        variants={fadeIn("up", "tween", 0.5, 0.5)}
+        className={css.container}
+      >
         <div className={css.logo}>
           <img src="./UFMBClogo2.jpeg" alt="" />
         </div>
@@ -125,7 +136,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
       <BasicModal
         title={"Thank You for Subscribing!"}
         text={
@@ -136,7 +147,7 @@ const Footer = () => {
         handleOpen={handleOpen}
         handleClose={handleClose}
       />
-    </section>
+    </motion.section>
   );
 };
 

@@ -17,7 +17,7 @@ const About = () => {
         <div className={css.service}>
           {/* <div className={css.serviceImg}></div> */}
           <motion.div
-            variants={fadeIn("up", "tween", 0.7, 0.6)}
+            variants={fadeIn("up", "tween", 0.5, 0.5)}
             className={css.serviceInfo}
           >
             <div className={css.serviceTitle}>Join Us for Worship Service </div>
@@ -25,7 +25,7 @@ const About = () => {
           </motion.div>
         </div>
         <motion.div
-          variants={fadeIn("up", "tween", 0.7, 0.6)}
+          variants={fadeIn("up", "tween", 0.5, 0.5)}
           className={css.churchStatements}
         >
           <div className={css.purpose}>
@@ -45,7 +45,7 @@ const About = () => {
           </div>
         </motion.div>
         <motion.div
-          variants={fadeIn("up", "tween", 0.7, 0.6)}
+          variants={slideIn("up", "tween", 0.7, 0.5)}
           className={css.resources}
         >
           Looking to grow your knowledge and love for God?
