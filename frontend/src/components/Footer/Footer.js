@@ -121,7 +121,7 @@ const Footer = () => {
               rel="noreferrer"
               className={css.yt}
             >
-              <BsYoutube size="30px" color="#781539" />
+              <BsYoutube size="30px" />
             </a>
           </div>
         </div>

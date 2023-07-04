@@ -37,7 +37,9 @@
   .container {
     @media (max-width: $xl) {
       font-size: 4rem;
-      padding: 4.5rem 1rem;
+      padding-top: 22rem;
+      padding-bottom: 2rem;
+      text-align: center;
     }
     @media (max-width: $lg) {
       padding: 0;
