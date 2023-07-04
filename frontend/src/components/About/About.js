@@ -1,19 +1,33 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 
 import css from "./About.module.scss";
 
 const About = () => {
   return (
-    <div className={css.wrapper}>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={css.wrapper}
+    >
       <div className={css.container}>
         <div className={css.service}>
           {/* <div className={css.serviceImg}></div> */}
-          <div className={css.serviceInfo}>
+          <motion.div
+            variants={fadeIn("up", "tween", 0.7, 0.6)}
+            className={css.serviceInfo}
+          >
             <div className={css.serviceTitle}>Join Us for Worship Service </div>
             <div className={css.serviceTimes}>Every Sunday at 10:30 a.m.</div>
-          </div>
+          </motion.div>
         </div>
-        <div className={css.churchStatements}>
+        <motion.div
+          variants={fadeIn("up", "tween", 0.7, 0.6)}
+          className={css.churchStatements}
+        >
           <div className={css.purpose}>
             <section className={css.purposeTitle}> Purpose Statement</section>
             <section className={css.purposeInfo}>
@@ -29,8 +43,11 @@ const About = () => {
               Disciples for the Kingdom of God.
             </section>
           </div>
-        </div>
-        <div className={css.resources}>
+        </motion.div>
+        <motion.div
+          variants={fadeIn("up", "tween", 0.7, 0.6)}
+          className={css.resources}
+        >
           Looking to grow your knowledge and love for God?
           <a
             target="_blank"
@@ -39,9 +56,9 @@ const About = () => {
           >
             <button>Online Bible</button>
           </a>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
