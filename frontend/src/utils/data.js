@@ -30,18 +30,18 @@ export const ministryInfo = [
     startTime: "18:00",
     endTime: "20:00",
   },
-  {
-    img: menImg,
-    href: "/mensministry",
-    title: "Men's Ministry",
-    desc: "Spreading and celebrating the word of God among brothers through fellowship",
-    descDetailed:
-      "Men's Ministry brings men closer together in fellowship, growing, strengthening, and encouraging them to be the spiritual leaders the Lord called them to be. It is a place where men come together and grow in their spiritual journey.",
-    day: "Thursdays",
-    time: "6:00 - 8:00 PM",
-    startTime: "18:00",
-    endTime: "20:00",
-  },
+  // {
+  //   img: menImg,
+  //   href: "/mensministry",
+  //   title: "Men's Ministry",
+  //   desc: "Spreading and celebrating the word of God among brothers through fellowship",
+  //   descDetailed:
+  //     "Men's Ministry brings men closer together in fellowship, growing, strengthening, and encouraging them to be the spiritual leaders the Lord called them to be. It is a place where men come together and grow in their spiritual journey.",
+  //   day: "Thursdays",
+  //   time: "6:00 - 8:00 PM",
+  //   startTime: "18:00",
+  //   endTime: "20:00",
+  // },
   {
     img: womenImg,
     href: "/womensministry",
@@ -49,7 +49,7 @@ export const ministryInfo = [
     desc: "Welcoming and connecting with other women into the life and works of the Gospel",
     descDetailed:
       "Women's Ministry seeks to support, build up, and empower women through prayer, Bible study, and fellowship. We create a loving and caring environment for all women, especially you, allowing you to thrive for the Lord.",
-    day: "Mondays",
+    day: "First Mondays",
     time: "6:00 - 8:00 PM",
     startTime: "18:00",
     endTime: "20:00",
@@ -61,10 +61,10 @@ export const ministryInfo = [
     desc: "Connecting young people with each other and the intergenerational life of the church",
     descDetailed:
       "Youth Ministry seeks to create the spark within each child that will lead to a long-lasting relationship with Jesus Christ. We want children to encounter God and His works through our ministries, leading them toward healthy lifestyles and relationships.",
-    day: "Tuesdays",
-    time: "6:00 - 8:00 PM",
-    startTime: "18:00",
-    endTime: "20:00",
+    day: "Third Sundays",
+    time: "10:00 - 11:30 PM",
+    startTime: "10:00",
+    endTime: "11:30",
   },
   {
     img: choirImg,
