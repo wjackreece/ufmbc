@@ -34,7 +34,7 @@
   font-weight: 700;
 
   .container {
-    @media (max-width: $xl) {
+    @media (min-width: $xl) {
       font-size: 4rem;
       padding-top: 22rem;
       padding-bottom: 2rem;
