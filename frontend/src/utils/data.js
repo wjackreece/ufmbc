@@ -26,8 +26,8 @@ export const ministryInfo = [
     descDetailed:
       "Bible Study helps to maintain our connection with God through his written Word. It reminds us of his character, promises, our dependence on him, and our future together. It familiarizes us with, and helps us grasp, the whole story of Scripture, and it keeps our souls energized.",
     day: "Wednesdays",
-    time: "6:00 - 8:00 PM",
-    startTime: "18:00",
+    time: "7:00 - 8:00 PM",
+    startTime: "19:00",
     endTime: "20:00",
   },
   // {
