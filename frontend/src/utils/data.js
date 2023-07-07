@@ -84,7 +84,7 @@ export const ministryInfo = [
     title: "Food Ministry",
     desc: "Providing food for those in need throughout our community and serving the community in love.",
     descDetailed:
-      "Food Ministry provides food and various sundry items to those in need throughout Vacaville and the surrounding area. We open our doors and invite people in, providing the sustenance they need for a healthy life.",
+      "Food Ministry provides food and various sundry items to those in need throughout Naples and the surrounding area. We open our doors and invite people in, providing the sustenance they need for a healthy life.",
     day: "Tuesdays",
     time: "4:00 PM",
     startTime: "18:00",
