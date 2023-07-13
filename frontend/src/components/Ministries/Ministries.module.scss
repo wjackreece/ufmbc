@@ -48,19 +48,18 @@
         // margin-bottom: 3rem;
       }
       .bannerVerse {
-        @media (max-width: $md) {
-          margin: 0 1rem;
-          margin-bottom: 1rem;
-          font-size: 2rem;
+        @media (max-width: $xl) {
+          font-size: 3rem;
+          width: 85%;
         }
         @media (max-width: $lg) {
           font-size: 2rem;
           width: 75%;
         }
-
-        @media (max-width: $xl) {
-          font-size: 3rem;
-          width: 85%;
+        @media (max-width: $md) {
+          margin: 0 1rem;
+          margin-bottom: 1rem;
+          font-size: 2rem;
         }
         font-size: 4rem;
         font-family: "Hepta Slab", serif;
@@ -136,17 +135,8 @@
         height: 100%;
 
         .minImg {
-          @media (max-width: $xl) {
-            height: 9rem;
-          }
-          @media (max-width: $lg) {
-            height: 12rem;
-          }
-          @media (max-width: $md) {
-            height: 11rem;
-          }
           border-radius: 25px 25px 0 0;
-          height: 10rem;
+          height: auto;
 
           .minImgStyle {
             width: 100%;
@@ -155,17 +145,11 @@
         }
 
         .minInfo {
-          @media (max-width: $xl) {
-            height: 41vh;
-          }
-          @media (max-width: $lg) {
-            height: 45vh;
-          }
           background-color: #f7f7f7;
           border-radius: 0 0 25px 25px;
           padding: 1rem;
           padding-bottom: 2rem;
-          height: fit-content;
+          height: auto;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
