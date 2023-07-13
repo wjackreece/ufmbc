@@ -83,3 +83,56 @@
     }
   }
 }
+
+.modal_container {
+  background-color: rgba(128, 128, 128, 0.244);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+  .box {
+    height: 75%;
+    width: 60%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-sizing: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .xButton {
+      position: relative;
+      text-align: right;
+      background-color: white;
+      text-decoration: none;
+      border: none;
+      font-weight: 800;
+      margin-left: 30rem;
+    }
+    .modal_body {
+      width: 100%;
+      height: 75%;
+
+      img {
+        width: 70%;
+        height: 100%;
+      }
+    }
+
+    .continueButton {
+      background-color: #781539;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: white;
+      font-weight: 600;
+      margin: 1rem 0rem;
+    }
+  }
+}

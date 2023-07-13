@@ -4,7 +4,7 @@ import { ministryInfo } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 const Ministries = () => {
   let navigate = useNavigate();
@@ -39,10 +39,7 @@ const Ministries = () => {
           Find a space where you can fellowship, learn, and serve alongside
           brothers and sisters in Christ
         </motion.div>
-        <motion.div
-          variants={fadeIn("up", "tween", 0.5, 0.5)}
-          className={css.ministry}
-        >
+        <div className={css.ministry}>
           {ministryInfo.map((min, i) => {
             return (
               <div className={css.info} key={i}>
@@ -59,7 +56,7 @@ const Ministries = () => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );
