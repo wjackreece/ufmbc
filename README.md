@@ -18,21 +18,9 @@ The purpose of this project is to develop a user-friendly website that serves as
 
 - HTML, CSS, JavaScript for front-end development
 - React, 
-- [Insert Backend Technologies, if any]
 
-## Installation and Usage
-
-[Add instructions for installation and running the project locally, if applicable.]
-
-## Contributions
-
-We welcome contributions from the community to improve and enhance the website. If you have suggestions, bug fixes, or new features to propose, feel free to submit a pull request.
-
-## License
-
-[Specify the license terms under which the code is released.]
 
 ## Contact
 
-For questions or inquiries, please contact [Your Name] at [Your Contact Information].
+For questions or inquiries, please contact Wynstona Jackreece at wjackreece@gmail.com.
 
