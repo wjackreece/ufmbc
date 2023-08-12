@@ -1,4 +1,4 @@
-# Church Website Project
+# UFMBChurch Website Project
 
 Welcome to the Church Website Project repository! This project aims to create a modern and interactive website for our church community, enhancing communication, engagement, and online presence.
 
@@ -17,7 +17,7 @@ The purpose of this project is to develop a user-friendly website that serves as
 ## Technologies Used
 
 - HTML, CSS, JavaScript for front-end development
-- React, 
+- React, Material UI, EmailJS, React Google Maps, Framer-Motion, LightGallery, React-Router-DOM, React-Icons, SASS
 
 
 ## Contact
